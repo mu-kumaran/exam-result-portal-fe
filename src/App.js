@@ -21,7 +21,7 @@ const App = () => {
             </div>
         </div>
         <div>
-            <p>This is the test site designed by <a href='https://github.com/mu-kumaran'>Manoj Kumar Dharmalingam</a> for project purpose and hosted using <a href='https://github.com/'>Github</a>, <a href='https://www.render.com/'>Render</a> and <a href='https://www.mongodb.com/products/platform/atlas-database'>MongoDB Atlas</a> platforms.</p>
+            <p>This is the test site designed by <a href='https://github.com/mu-kumaran'>Manoj Kumar Dharmalingam</a> using MERN Stack for project purpose and hosted using <a href='https://github.com/'>Github</a>, <a href='https://www.render.com/'>Render</a> and <a href='https://www.mongodb.com/products/platform/atlas-database'>MongoDB Atlas</a> platforms.</p>
             <p>Note: Use Registration No between 01108000501-510 and DOB as 01/01/2001 for testing purpose.</p>
         </div>
     </>
