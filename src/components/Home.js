@@ -1,0 +1,59 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
+
+const Home = () => {
+    const [rno,setRno] = useState("8000501")
+    const [dob,setDob] = useState("01/01/2001")
+    const navigate = useNavigate()
+
+    const dis=(e)=>{
+        if (e.target.name === "rno")
+            setRno(e.target.value)
+        if (e.target.name === "dob")
+            setDob(e.target.value)
+    }
+
+    const handleReset = () =>{
+        setRno("8000501")
+        setDob('01/01/2001')
+    }
+
+    function findfun(){
+        var inputdata = {
+            rno:parseInt(rno),
+            dob:dob
+        }
+        console.log(inputdata)
+        axios.get("http://127.0.0.1:1234",{params:inputdata}).then((res)=>{
+            console.log(res)
+            console.log(res.data)
+
+            // navigation to result page with data
+            navigate('/result',{state:{result:res.data}})
+        }).catch((err)=>{
+            console.log(err.response.data)
+            alert('Something went wrong. Please try again.');
+        })
+        
+    }
+  return (
+    <div>
+      <div>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <label htmlFor='rno'>Registration No: </label>
+                <input type='text' name='rno' placeholder='Enter your registration no' value={rno} onChange={(e)=>dis(e)}></input><br></br><br></br>
+                <label htmlFor='dob'>Date of Birth (dd/mm/yyyy): </label>
+                <input type='text' name='dob' placeholder='Enter your dob' value={dob} onChange={(e)=>dis(e)}></input><br></br><br></br>
+                <button onClick={findfun}>Get Results</button> <button onClick={handleReset}>Clear</button>
+            </form>
+        </div>
+        <div>
+            <p>This is the test site designed by <a href='https://github.com/mu-kumaran'>Manoj Kumar Dharmalingam</a> using MERN Stack for project purpose and hosted using <a href='https://github.com/'>Github</a>, <a href='https://www.render.com/'>Render</a> and <a href='https://www.mongodb.com/products/platform/atlas-database'>MongoDB Atlas</a> platforms.</p>
+            <p>Note: Use Registration No between 8000501-510 and DOB as 01/01/2001 for testing purpose.</p>
+        </div>
+    </div>
+  )
+}
+
+export default Home
