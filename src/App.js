@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import axios from "axios"
+
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import ResultPage from './components/ResultPage'

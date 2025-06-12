@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -20,11 +22,38 @@ const Home = () => {
     }
 
     function findfun(){
+
+        // User Input Validation
+        const regNoPattern = /^[0-9]{7}$/;            // 7-digit number
+        const dobPattern = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/; // dd/mm/yyyy
+
+        // Validate Reg no
+        if(!regNoPattern.test(rno)){
+            alert("Invalid registration number. Enter valid one.")
+            handleReset()
+            return
+        }
+
+        // Validate dob
+        if(!dobPattern.test(dob)){
+            alert("Enter a valid dob with right format dd/mm/yyyy")
+            handleReset()
+            return
+        }
+
+        // Alert for test site
+        if(dob !== '01/01/2001'){
+            alert("Since this is the test site. Kindly use 01/01/2001 as dob for testing purpose")
+            handleReset()
+            return
+        }
+
         var inputdata = {
-            rno:parseInt(rno),
-            dob:dob
+        rno:parseInt(rno),
+        dob:dob
         }
         console.log(inputdata)
+        
         axios.get("http://127.0.0.1:1234",{params:inputdata}).then((res)=>{
             console.log(res)
             console.log(res.data)
