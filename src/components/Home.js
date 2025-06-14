@@ -43,7 +43,7 @@ const Home = () => {
 
         // Alert for test site
         if(dob !== '01/01/2001'){
-            alert("Since this is the test site. Kindly use 01/01/2001 as dob for testing purpose")
+            alert("Since this is the test site, kindly use 01/01/2001 as dob for testing purpose")
             handleReset()
             return
         }
@@ -54,12 +54,13 @@ const Home = () => {
         }
         console.log(inputdata)
         
-        axios.get("http://127.0.0.1:1234",{params:inputdata}).then((res)=>{
+        axios.get("http://127.0.0.1:8888",{params:inputdata}).then((res)=>{
             console.log(res)
             console.log(res.data)
 
             // navigation to result page with data
             navigate('/result',{state:{result:res.data}})
+            
         }).catch((err)=>{
             console.log(err.response.data)
             alert('Something went wrong. Please try again.');

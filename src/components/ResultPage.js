@@ -26,6 +26,12 @@ const ResultPage = () => {
           <tr>
             <td><strong>Registration no :</strong></td>
             <td>{student.rno}</td>
+            {/* Image in right column spanning 5 rows */}
+            <td rowSpan="5">
+              {student.photoURL && (<img
+              src={student.photoURL} alt='Student-Image'
+              style={{ width: "180px", height: "180px", borderRadius: "10px", marginBottom: "0px", objectFit: "cover", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}/>)}
+            </td>
           </tr>
           <tr>
             <td><strong>Student name :</strong></td>
@@ -40,7 +46,11 @@ const ResultPage = () => {
             <td>{student.Result}</td>
           </tr>
           <tr>
-            <td colSpan="2">
+            <td><strong>School :</strong></td>
+            <td>{student.school}</td>
+          </tr>
+          <tr>
+            <td colSpan="3">
               <h3>Subject-Wise Marks</h3>
               <table border="1" cellPadding="5" style={{width:"100%"}}>
                 <thead>
