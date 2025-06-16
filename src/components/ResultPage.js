@@ -82,6 +82,7 @@ const ResultPage = () => {
       </table>
       <br/>
       <button onClick={()=>navigate('/')}>Search Again</button>
+      <p>Image Credit: <a href='https://www.freepik.com/' target='_blank'>freepik</a></p>
     </div>
   )
 }

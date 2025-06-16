@@ -23,6 +23,7 @@ const Home = () => {
 
     function findfun(){
 
+        // Form validation
         // User Input Validation
         const regNoPattern = /^[0-9]{7}$/;            // 7-digit number
         const dobPattern = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/\d{4}$/; // dd/mm/yyyy
