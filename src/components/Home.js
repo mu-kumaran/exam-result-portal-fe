@@ -55,7 +55,7 @@ const Home = () => {
         }
         console.log(inputdata)
         
-        axios.get("http://127.0.0.1:8888",{params:inputdata}).then((res)=>{
+        axios.get("http://127.0.0.1:8888/api/find",{params:inputdata}).then((res)=>{
             console.log(res)
             console.log(res.data)
 
