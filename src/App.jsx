@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import ResultPage from './components/ResultPage'
 import ErrorPage from './components/ErrorPage'
+import SharePage from './components/SharePage'
 import { Helmet } from 'react-helmet-async'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route element={<Home/>} path='/'></Route>
             <Route element={<ResultPage/>} path='/result'></Route>
             <Route element={<ErrorPage/>} path='/error'></Route>
+            <Route element={<SharePage/>} path='/share'></Route>
         </Routes>
     </div>
   )

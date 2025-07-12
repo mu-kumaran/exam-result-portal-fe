@@ -124,6 +124,7 @@ const ResultPage = () => {
       <button onClick={()=>navigate('/')}>Search Again</button>
       <button onClick={handlePrint}>Print</button>
       <button onClick={handleDownloadPDF}>Download as PDF</button>
+      <button onClick={()=>navigate('/share')}>Share results</button>
       <p>Image Credit: <a href='https://www.freepik.com/' target='_blank'>freepik</a></p>
     </div>
   )

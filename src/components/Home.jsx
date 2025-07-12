@@ -91,7 +91,7 @@ const Home = () => {
             </form>
         </div>
         <div>
-            <p>This is the test site designed by <a href='https://github.com/mu-kumaran' target='_blank'>Manoj Kumar Dharmalingam</a> using MERN Stack for project purpose and hosted using <a href='https://github.com/' target='_blank'>Github</a>, <a href='https://www.netlify.com/'  target='_blank'>Netlify</a>, <a href='https://www.render.com/'  target='_blank'>Render</a> and <a href='https://www.mongodb.com/products/platform/atlas-database'  target='_blank'>MongoDB Atlas</a> platforms.</p>
+            <p>This is the test site designed by <a href='https://github.com/mu-kumaran' target='_blank'>Manoj Kumar Dharmalingam</a> using MERN Stack for project purpose and deployed using <a href='https://github.com/' target='_blank'>Github</a>, <a href='https://www.netlify.com/'  target='_blank'>Netlify</a>, <a href='https://www.render.com/'  target='_blank'>Render</a> and <a href='https://www.mongodb.com/products/platform/atlas-database'  target='_blank'>MongoDB Atlas</a> platforms.</p>
             <p>Note: Use Registration No between 8000501-510 and DOB as 01/01/2001 for testing purpose.</p>
         </div>
     </div>
